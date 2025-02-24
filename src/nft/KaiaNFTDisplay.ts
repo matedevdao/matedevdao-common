@@ -15,13 +15,9 @@ export default class KaiaNFTDisplay extends DomNode {
   private async loadImage() {
     const loadingSpinner = new AppCompConfig.LoadingSpinner().appendTo(this);
 
-    let imageSrc: string | undefined;
     if (this.collection === SupportedCollections.DogeSoundClubMates) {
-      imageSrc = await MateOnchainImagesContract.getImage(this.tokenId);
-    }
-
-    if (imageSrc && imageSrc !== "") {
-      this.append(el("img", { src: imageSrc }));
+      const dataUrl = await MateOnchainImagesContract.getImage(this.tokenId);
+      if (dataUrl !== "") this.append(el("img.pixel-art", { src: dataUrl }));
     }
 
     loadingSpinner.remove();
