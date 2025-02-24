@@ -10,7 +10,7 @@ const PARSING_NFT_DATA_CONTRACT_ADDRESS =
 class ParsingNFTDataContract {
   public async getERC721HolderList(
     address: `0x${string}`,
-    tokenIds: bigint[],
+    tokenIds: number[],
   ): Promise<string[]> {
     return await KaiaRpcConnector.readContract({
       chainId: KAIA_CHAIN_ID,
