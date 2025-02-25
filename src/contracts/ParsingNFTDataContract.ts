@@ -1,6 +1,6 @@
 import { KaiaRpcConnector } from "kaia-wallet-module";
 import ParsingNFTDataArtifact from "./artifacts/ParsingNFTData.json" with {
-  type: "json",
+  type: "json"
 };
 
 const KAIA_CHAIN_ID = 8217;
@@ -10,7 +10,7 @@ const PARSING_NFT_DATA_CONTRACT_ADDRESS =
 class ParsingNFTDataContract {
   public async getERC721HolderList(
     address: `0x${string}`,
-    tokenIds: number[],
+    tokenIds: bigint[],
   ): Promise<string[]> {
     return await KaiaRpcConnector.readContract({
       chainId: KAIA_CHAIN_ID,
