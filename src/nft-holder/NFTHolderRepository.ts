@@ -5,6 +5,10 @@ class NFTHolderRepository extends SupabaseDataRepository<NFTHolderEntity> {
   constructor() {
     super("nft_holders", NFTHolderQuery);
   }
+
+  public async fetchByHolder(holder: string): Promise<NFTHolderEntity[]> {
+    return await this.fetch((b) => b.eq("holder", holder));
+  }
 }
 
 export default new NFTHolderRepository();

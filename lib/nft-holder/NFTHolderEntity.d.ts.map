@@ -1,0 +1,1 @@
+{"version":3,"file":"NFTHolderEntity.d.ts","sourceRoot":"","sources":["../../src/nft-holder/NFTHolderEntity.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,OAAO,WAAW,eAAe;IACtC,WAAW,EAAE,MAAM,CAAC;IACpB,QAAQ,EAAE,MAAM,CAAC;IACjB,MAAM,EAAE,MAAM,CAAC;CAChB;AAED,eAAO,MAAM,cAAc,MAAM,CAAC"}
