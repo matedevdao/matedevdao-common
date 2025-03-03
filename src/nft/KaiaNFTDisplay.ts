@@ -1,6 +1,6 @@
 import { DomNode, el } from "@common-module/app";
 import { AppCompConfig } from "@common-module/app-components";
-import MateOnchainImagesContract from "../contracts/MateOnchainImagesContract.js";
+import MateImageCacher from "../mate-images/MateImageCacher.js";
 import SupportedNFTAddresses from "./SupportedNFTAddresses.js";
 
 export default class KaiaNFTDisplay extends DomNode {
@@ -16,9 +16,7 @@ export default class KaiaNFTDisplay extends DomNode {
     const loadingSpinner = new AppCompConfig.LoadingSpinner().appendTo(this);
 
     if (this.nftAddress === SupportedNFTAddresses.DogeSoundClubMates) {
-      const dataUrl = await MateOnchainImagesContract.getImage(
-        BigInt(this.tokenId),
-      );
+      const dataUrl = await MateImageCacher.getImage(this.tokenId);
       if (dataUrl !== "") this.append(el("img.pixel-art", { src: dataUrl }));
     }
 
