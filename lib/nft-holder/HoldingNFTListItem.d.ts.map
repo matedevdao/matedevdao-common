@@ -1,1 +1,1 @@
-{"version":3,"file":"HoldingNFTListItem.d.ts","sourceRoot":"","sources":["../../src/nft-holder/HoldingNFTListItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAE7C,MAAM,CAAC,OAAO,OAAO,kBAAmB,SAAQ,OAAO;;CAItD"}
+{"version":3,"file":"HoldingNFTListItem.d.ts","sourceRoot":"","sources":["../../src/nft-holder/HoldingNFTListItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,oBAAoB,CAAC;AAE7C,OAAO,eAAe,MAAM,sBAAsB,CAAC;AAEnD,MAAM,CAAC,OAAO,OAAO,kBAAmB,SAAQ,OAAO;gBACzC,GAAG,EAAE,eAAe;CAMjC"}

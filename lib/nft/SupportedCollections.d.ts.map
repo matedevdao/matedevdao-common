@@ -1,1 +1,1 @@
-{"version":3,"file":"SupportedCollections.d.ts","sourceRoot":"","sources":["../../src/nft/SupportedCollections.ts"],"names":[],"mappings":"AAAA,aAAK,oBAAoB;IACvB,kBAAkB,IAAA;IAClB,mBAAmB,IAAA;IACnB,wBAAwB,IAAA;IACxB,aAAa,IAAA;IACb,eAAe,IAAA;IACf,QAAQ,IAAA;IACR,aAAa,IAAA;IACb,QAAQ,IAAA;CACT;AAED,eAAe,oBAAoB,CAAC"}
+{"version":3,"file":"SupportedCollections.d.ts","sourceRoot":"","sources":["../../src/nft/SupportedCollections.ts"],"names":[],"mappings":"AAAA,QAAA,MAAM,qBAAqB,EAAE,KAAK,MAAM,EAAE,EASzC,CAAC;AAEF,eAAe,qBAAqB,CAAC"}

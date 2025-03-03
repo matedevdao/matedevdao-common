@@ -1,9 +1,8 @@
 import { DomNode } from "@common-module/app";
-import SupportedCollections from "./SupportedCollections.js";
 export default class KaiaNFTDisplay extends DomNode {
-    private collection;
+    private nftAddress;
     private tokenId;
-    constructor(collection: SupportedCollections, tokenId: bigint);
+    constructor(nftAddress: string, tokenId: number);
     private loadImage;
 }
 //# sourceMappingURL=KaiaNFTDisplay.d.ts.map

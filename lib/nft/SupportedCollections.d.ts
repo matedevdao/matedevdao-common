@@ -1,12 +1,3 @@
-declare enum SupportedCollections {
-    DogeSoundClubMates = 0,
-    DogeSoundClubEMates = 1,
-    DogeSoundClubBiasedMates = 2,
-    SigorSparrows = 3,
-    SigorHouseDeeds = 4,
-    KCDKongz = 5,
-    KCDPixelKongz = 6,
-    BabyPing = 7
-}
-export default SupportedCollections;
+declare const SupportedNFTAddresses: `0x${string}`[];
+export default SupportedNFTAddresses;
 //# sourceMappingURL=SupportedCollections.d.ts.map
