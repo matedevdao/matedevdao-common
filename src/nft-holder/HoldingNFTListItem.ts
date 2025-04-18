@@ -1,4 +1,4 @@
-import { DomNode } from "@common-module/app";
+import { DomNode } from "@commonmodule/app";
 import KaiaNFTDisplay from "../nft/KaiaNFTDisplay.js";
 import NFTHolderEntity from "./NFTHolderEntity.js";
 

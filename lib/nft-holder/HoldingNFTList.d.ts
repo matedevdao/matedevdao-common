@@ -1,4 +1,4 @@
-import { DomNode } from "@common-module/app";
+import { DomNode } from "@commonmodule/app";
 export default class HoldingNFTList extends DomNode {
     private holder;
     constructor(holder: string);

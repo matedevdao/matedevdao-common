@@ -1,4 +1,4 @@
-import { SupabaseConnector } from "@common-module/supabase";
+import { SupabaseConnector } from "@commonmodule/supabase";
 import NFTHolderRepository from "./nft-holder/NFTHolderRepository.js";
 
 class MDDModuleConfig {

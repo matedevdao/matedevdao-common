@@ -1,4 +1,4 @@
-import { DomNode } from "@common-module/app";
+import { DomNode } from "@commonmodule/app";
 import MateImageCacher from "../mate-images/MateImageCacher.js";
 import SupportedNFTAddresses from "../nft/SupportedNFTAddresses.js";
 import HoldingNFTListItem from "./HoldingNFTListItem.js";

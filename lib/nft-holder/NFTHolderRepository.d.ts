@@ -1,4 +1,4 @@
-import { SupabaseDataRepository } from "@common-module/supabase";
+import { SupabaseDataRepository } from "@commonmodule/supabase";
 import NFTHolderEntity from "./NFTHolderEntity.js";
 declare class NFTHolderRepository extends SupabaseDataRepository<NFTHolderEntity> {
     constructor();
