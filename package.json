@@ -9,7 +9,7 @@
   "dependencies": {
     "@commonmodule/material-loading-spinner": "^0.1.7",
     "kaia-wallet-module": "^0.0.3",
-    "nft-attribute-editor": "^0.0.1"
+    "nft-attribute-editor": "^0.0.2"
   },
   "devDependencies": {}
 }
