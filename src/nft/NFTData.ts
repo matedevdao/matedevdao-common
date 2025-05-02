@@ -4,6 +4,7 @@ export default interface NFTData {
   name: string;
   description: string;
   image: string;
+  thumbnail?: string;
   external_url: string;
   animation_url?: string;
   traits?: { [traitName: string]: string | number };

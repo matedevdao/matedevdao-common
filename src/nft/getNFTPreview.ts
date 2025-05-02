@@ -12,6 +12,6 @@ export default function getNFTPreview(nftData: NFTData): DomNode {
   } else if (nftData.collection === "babyping") {
     return new BabyPingPreview(nftData);
   } else {
-    return el("img.nft-preview", { src: nftData.image });
+    return el("img.nft-preview", { src: nftData.thumbnail ?? nftData.image });
   }
 }

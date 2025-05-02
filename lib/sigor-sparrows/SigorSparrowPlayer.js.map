@@ -1,1 +1,1 @@
-{"version":3,"file":"SigorSparrowPlayer.js","sourceRoot":"","sources":["../../src/sigor-sparrows/SigorSparrowPlayer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAE5C,MAAM,CAAC,OAAO,OAAO,kBAAmB,SAAQ,OAAO;IACrD;QACE,KAAK,CAAC,kCAAkC,CAAC,CAAC;IAC5C,CAAC;CACF"}
+{"version":3,"file":"SigorSparrowPlayer.js","sourceRoot":"","sources":["../../src/sigor-sparrows/SigorSparrowPlayer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAG5C,MAAM,CAAC,OAAO,OAAO,kBAAmB,SAAQ,OAAO;IACrD,YAAY,OAAgB;QAC1B,KAAK,CAAC,kCAAkC,CAAC,CAAC;IAC5C,CAAC;CACF"}

@@ -1,1 +1,1 @@
-{"version":3,"file":"KCDKongPlayer.d.ts","sourceRoot":"","sources":["../../src/kingcrowndao-kongz/KCDKongPlayer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAE5C,MAAM,CAAC,OAAO,OAAO,aAAc,SAAQ,OAAO;;CAIjD"}
+{"version":3,"file":"KCDKongPlayer.d.ts","sourceRoot":"","sources":["../../src/kingcrowndao-kongz/KCDKongPlayer.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAC5C,OAAO,OAAO,MAAM,mBAAmB,CAAC;AAExC,MAAM,CAAC,OAAO,OAAO,aAAc,SAAQ,OAAO;gBACpC,OAAO,EAAE,OAAO;CAG7B"}

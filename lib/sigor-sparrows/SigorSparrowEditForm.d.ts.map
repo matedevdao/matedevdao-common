@@ -1,1 +1,1 @@
-{"version":3,"file":"SigorSparrowEditForm.d.ts","sourceRoot":"","sources":["../../src/sigor-sparrows/SigorSparrowEditForm.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAE5C,MAAM,CAAC,OAAO,OAAO,oBAAqB,SAAQ,OAAO;;CAIxD"}
+{"version":3,"file":"SigorSparrowEditForm.d.ts","sourceRoot":"","sources":["../../src/sigor-sparrows/SigorSparrowEditForm.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAC5C,OAAO,OAAO,MAAM,mBAAmB,CAAC;AAExC,MAAM,CAAC,OAAO,OAAO,oBAAqB,SAAQ,OAAO;gBAC3C,OAAO,EAAE,OAAO;CAG7B"}
