@@ -1,1 +1,1 @@
-{"version":3,"file":"SigorSparrowPreview.d.ts","sourceRoot":"","sources":["../../src/sigor-sparrows/SigorSparrowPreview.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAE5C,MAAM,CAAC,OAAO,OAAO,mBAAoB,SAAQ,OAAO;;CAIvD"}
+{"version":3,"file":"SigorSparrowPreview.d.ts","sourceRoot":"","sources":["../../src/sigor-sparrows/SigorSparrowPreview.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAC5C,OAAO,OAAO,MAAM,mBAAmB,CAAC;AAExC,MAAM,CAAC,OAAO,OAAO,mBAAoB,SAAQ,OAAO;gBAC1C,OAAO,EAAE,OAAO;CAI7B"}

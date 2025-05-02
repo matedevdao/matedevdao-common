@@ -1,1 +1,1 @@
-{"version":3,"file":"BabyPingPreview.d.ts","sourceRoot":"","sources":["../../src/babyping/BabyPingPreview.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAE5C,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,OAAO;;CAInD"}
+{"version":3,"file":"BabyPingPreview.d.ts","sourceRoot":"","sources":["../../src/babyping/BabyPingPreview.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAC5C,OAAO,OAAO,MAAM,mBAAmB,CAAC;AAExC,MAAM,CAAC,OAAO,OAAO,eAAgB,SAAQ,OAAO;gBACtC,OAAO,EAAE,OAAO;CAI7B"}
