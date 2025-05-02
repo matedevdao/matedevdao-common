@@ -36,7 +36,7 @@ export default class SigorSparrowPreview extends DomNode {
               spritesheet,
               frame,
             ).appendTo(this.gameScreen.root);
-            sprite.zIndex = image.zIndex;
+            sprite.drawingOrder = image.drawingOrder;
           }
         }
       }
