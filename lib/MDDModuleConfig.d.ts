@@ -1,5 +1,7 @@
 declare class MDDModuleConfig {
-    init(): void;
+    init(options: {
+        appName: string;
+    }): void;
 }
 declare const _default: MDDModuleConfig;
 export default _default;
