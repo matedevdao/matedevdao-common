@@ -1,4 +1,5 @@
 import { AppCompConfig } from "@commonmodule/app-components";
+import { ImageCombiner } from "@commonmodule/image-combiner";
 import { MaterialLoadingSpinner } from "@commonmodule/material-loading-spinner";
 import { SocialCompConfig, UserManager } from "@commonmodule/social-components";
 import { AddressUtils } from "@commonmodule/wallet-utils";
@@ -18,7 +19,9 @@ class MDDModuleConfig {
     return this.editableNFTCollections.includes(collection);
   }
 
-  public init(options: { appName: string }) {
+  public async init(options: { appName: string }) {
+    await ImageCombiner.initWasm();
+
     KaiaWalletLoginConfig.init({
       appName: options.appName,
       apiBaseURL: "https://api.matedevdao.workers.dev",

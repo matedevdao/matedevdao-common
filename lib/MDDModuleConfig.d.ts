@@ -3,7 +3,7 @@ declare class MDDModuleConfig {
     isEditableNFTCollection(collection: string): boolean;
     init(options: {
         appName: string;
-    }): void;
+    }): Promise<void>;
 }
 declare const _default: MDDModuleConfig;
 export default _default;
