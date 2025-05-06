@@ -1,8 +1,7 @@
-import { DomNode } from "@commonmodule/app";
 import { NFTData } from "nft-data";
-export default class BabyPingEditForm extends DomNode {
+import NFTEditForm from "../nft/NFTEditForm.js";
+export default class BabyPingEditForm extends NFTEditForm {
     private nftPlayer;
-    private attributeEditor;
     constructor(nftData: NFTData);
 }
 //# sourceMappingURL=BabyPingEditForm.d.ts.map

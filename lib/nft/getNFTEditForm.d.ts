@@ -1,4 +1,4 @@
-import { DomNode } from "@commonmodule/app";
 import NFTDataWithMeta from "./NFTDataWithMeta.js";
-export default function getNFTEditForm(nftData: NFTDataWithMeta): DomNode;
+import NFTEditForm from "./NFTEditForm.js";
+export default function getNFTEditForm(nftData: NFTDataWithMeta): NFTEditForm;
 //# sourceMappingURL=getNFTEditForm.d.ts.map
