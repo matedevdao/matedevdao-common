@@ -1,4 +1,6 @@
 declare class MDDModuleConfig {
+    private editableNFTCollections;
+    isEditableNFTCollection(collection: string): boolean;
     init(options: {
         appName: string;
     }): void;

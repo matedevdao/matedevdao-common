@@ -1,5 +1,5 @@
 import { DomNode, el } from "@commonmodule/app";
-import NFTData from "../nft/NFTData.js";
+import { NFTData } from "nft-data";
 import { DomWrapperNode, GameScreen, Sprite } from "@gaiaengine/2d";
 import parts from "./parts.json" assert { type: "json" };
 import { Button, ButtonType, SvgIcon } from "@commonmodule/app-components";
@@ -46,6 +46,7 @@ export default class SigorSparrowPlayer extends DomNode {
     const stylePath = style === "Illustration" ? "normal" : "pixel";
 
     for (const [partName, partValue] of Object.entries(this.data.parts)) {
+      if (stylePath === "pixel" && partName === "Text Balloon") continue;
       const category = parts.find((cat) => cat.name === partName);
       if (category) {
         const part = category.parts.find((p) => p.name === partValue);

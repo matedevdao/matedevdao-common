@@ -8,6 +8,16 @@ import {
 } from "kaia-wallet-login-module";
 
 class MDDModuleConfig {
+  private editableNFTCollections: string[] = [
+    "sigor-sparrows",
+    "kingcrowndao-kongz",
+    "babyping",
+  ];
+
+  public isEditableNFTCollection(collection: string): boolean {
+    return this.editableNFTCollections.includes(collection);
+  }
+
   public init(options: { appName: string }) {
     KaiaWalletLoginConfig.init({
       appName: options.appName,

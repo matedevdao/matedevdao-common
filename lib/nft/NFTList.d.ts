@@ -1,9 +1,9 @@
 import { DomNode } from "@commonmodule/app";
-import NFTData from "./NFTData.js";
+import NFTDataWithMeta from "./NFTDataWithMeta.js";
 export default class NFTList extends DomNode<HTMLDivElement, {
-    selectNFT: (nftData: NFTData) => void;
+    selectNFT: (nftData: NFTDataWithMeta) => void;
 }> {
-    constructor(nfts: NFTData[]);
-    renderNFTs(nfts: NFTData[]): void;
+    constructor(nfts: NFTDataWithMeta[]);
+    renderNFTs(nfts: NFTDataWithMeta[]): void;
 }
 //# sourceMappingURL=NFTList.d.ts.map

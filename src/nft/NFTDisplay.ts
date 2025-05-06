@@ -2,10 +2,10 @@ import { DomNode, el } from "@commonmodule/app";
 import BabyPingPlayer from "../babyping/BabyPingPlayer.js";
 import KCDKongPlayer from "../kingcrowndao-kongz/KCDKongPlayer.js";
 import SigorSparrowPlayer from "../sigor-sparrows/SigorSparrowPlayer.js";
-import NFTData from "./NFTData.js";
+import NFTDataWithMeta from "./NFTDataWithMeta.js";
 
 export default class NFTDisplay extends DomNode {
-  constructor(nftData: NFTData) {
+  constructor(nftData: NFTDataWithMeta) {
     super(".nft-display");
     if (nftData.collection === "sigor-sparrows") {
       this.append(new SigorSparrowPlayer(nftData));

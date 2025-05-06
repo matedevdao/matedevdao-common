@@ -1,6 +1,6 @@
 import { DomNode, el } from "@commonmodule/app";
 import { GameScreen, Sprite } from "@gaiaengine/dom";
-import NFTData from "../nft/NFTData.js";
+import { NFTData } from "nft-data";
 import parts from "./parts.json" assert { type: "json" };
 import keyToFrame from "./spritesheet/key-to-frame.json" assert {
   type: "json",
@@ -11,12 +11,13 @@ import spritesheet from "./spritesheet/spritesheet.json" assert {
 
 export default class SigorSparrowPreview extends DomNode {
   private gameScreen: GameScreen;
+  private dialogue: DomNode;
 
   constructor(nftData: NFTData) {
     super(".sigor-sparrow-preview.nft-preview");
     this.append(
       this.gameScreen = new GameScreen(128, 128),
-      el(".dialogue", nftData.traits!["Dialogue"] as string),
+      this.dialogue = el(".dialogue", nftData.traits!["Dialogue"] as string),
     );
 
     const _keyToFrame = (keyToFrame as any)[nftData.traits!["Style"]];
@@ -54,5 +55,10 @@ export default class SigorSparrowPreview extends DomNode {
     const ratio = Math.min(widthRatio, heightRatio);
 
     this.gameScreen.resize(128, 128, ratio);
+
+    this.dialogue.style({
+      top: `${20 * ratio}px`,
+      fontSize: `${Math.floor(10 * ratio)}px`,
+    });
   }
 }

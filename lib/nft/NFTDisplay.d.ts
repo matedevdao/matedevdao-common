@@ -1,6 +1,6 @@
 import { DomNode } from "@commonmodule/app";
-import NFTData from "./NFTData.js";
+import NFTDataWithMeta from "./NFTDataWithMeta.js";
 export default class NFTDisplay extends DomNode {
-    constructor(nftData: NFTData);
+    constructor(nftData: NFTDataWithMeta);
 }
 //# sourceMappingURL=NFTDisplay.d.ts.map

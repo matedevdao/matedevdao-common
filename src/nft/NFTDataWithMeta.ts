@@ -1,4 +1,6 @@
-export default interface NFTData {
+import { NFTData } from "nft-data";
+
+export default interface NFTDataWithMeta extends NFTData {
   collection: string;
   id: number;
   name: string;
@@ -7,7 +9,5 @@ export default interface NFTData {
   thumbnail?: string;
   external_url: string;
   animation_url?: string;
-  traits?: { [traitName: string]: string | number };
-  parts: { [partName: string]: string | number };
   holder: string;
 }

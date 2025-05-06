@@ -1,3 +1,11 @@
+export default interface NFTAttributes {
+    traits?: {
+        [traitName: string]: string | number;
+    };
+    parts: {
+        [partName: string]: string | number;
+    };
+}
 export default interface NFTData {
     collection: string;
     id: number;

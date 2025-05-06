@@ -1,16 +1,16 @@
 import { DomNode } from "@commonmodule/app";
-import NFTData from "./NFTData.js";
 import NFTListItem from "./NFTListItem.js";
+import NFTDataWithMeta from "./NFTDataWithMeta.js";
 
 export default class NFTList extends DomNode<HTMLDivElement, {
-  selectNFT: (nftData: NFTData) => void;
+  selectNFT: (nftData: NFTDataWithMeta) => void;
 }> {
-  constructor(nfts: NFTData[]) {
+  constructor(nfts: NFTDataWithMeta[]) {
     super(".nft-list");
     this.renderNFTs(nfts);
   }
 
-  public renderNFTs(nfts: NFTData[]) {
+  public renderNFTs(nfts: NFTDataWithMeta[]) {
     this.clear();
     for (const nftData of nfts) {
       const item = new NFTListItem(nftData).appendTo(this);

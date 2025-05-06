@@ -1,5 +1,5 @@
 import { DomNode } from "@commonmodule/app";
-import NFTData from "../nft/NFTData.js";
+import { NFTData } from "nft-data";
 export default class KCDKongPlayer extends DomNode {
     private data;
     private screen;

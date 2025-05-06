@@ -1,4 +1,4 @@
 import { DomNode } from "@commonmodule/app";
-import NFTData from "./NFTData.js";
-export default function getNFTPreview(nftData: NFTData): DomNode;
+import NFTDataWithMeta from "./NFTDataWithMeta.js";
+export default function getNFTPreview(nftData: NFTDataWithMeta): DomNode;
 //# sourceMappingURL=getNFTPreview.d.ts.map

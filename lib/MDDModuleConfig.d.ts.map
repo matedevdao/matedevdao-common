@@ -1,1 +1,1 @@
-{"version":3,"file":"MDDModuleConfig.d.ts","sourceRoot":"","sources":["../src/MDDModuleConfig.ts"],"names":[],"mappings":"AASA,cAAM,eAAe;IACZ,IAAI,CAAC,OAAO,EAAE;QAAE,OAAO,EAAE,MAAM,CAAA;KAAE;CAkCzC;;AAED,wBAAqC"}
+{"version":3,"file":"MDDModuleConfig.d.ts","sourceRoot":"","sources":["../src/MDDModuleConfig.ts"],"names":[],"mappings":"AASA,cAAM,eAAe;IACnB,OAAO,CAAC,sBAAsB,CAI5B;IAEK,uBAAuB,CAAC,UAAU,EAAE,MAAM,GAAG,OAAO;IAIpD,IAAI,CAAC,OAAO,EAAE;QAAE,OAAO,EAAE,MAAM,CAAA;KAAE;CAkCzC;;AAED,wBAAqC"}

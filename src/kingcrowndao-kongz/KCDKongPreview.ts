@@ -1,6 +1,6 @@
 import { DomNode } from "@commonmodule/app";
 import { GameScreen, Sprite } from "@gaiaengine/dom";
-import NFTData from "../nft/NFTData.js";
+import { NFTData } from "nft-data";
 import parts from "./parts.json" assert { type: "json" };
 import keyToFrame from "./spritesheet/key-to-frame.json" assert {
   type: "json",

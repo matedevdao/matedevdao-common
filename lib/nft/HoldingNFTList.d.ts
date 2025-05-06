@@ -1,7 +1,7 @@
 import { DomNode } from "@commonmodule/app";
-import NFTData from "./NFTData.js";
+import NFTDataWithMeta from "./NFTDataWithMeta.js";
 export default class HoldingNFTList extends DomNode<HTMLDivElement, {
-    selectNFT: (nftData: NFTData) => void;
+    selectNFT: (nftData: NFTDataWithMeta) => void;
 }> {
     private walletAddress;
     constructor(walletAddress: string);

@@ -1,6 +1,6 @@
 import { DomNode } from "@commonmodule/app";
 import { GameScreen, Sprite } from "@gaiaengine/2d";
-import NFTData from "../nft/NFTData.js";
+import { NFTData } from "nft-data";
 import parts from "./parts.json" assert { type: "json" };
 
 export default class KCDKongPlayer extends DomNode {

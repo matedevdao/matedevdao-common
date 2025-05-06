@@ -1,5 +1,5 @@
 import { DomNode } from "@commonmodule/app";
-import NFTData from "../nft/NFTData.js";
+import { NFTData } from "nft-data";
 export default class SigorSparrowPlayer extends DomNode {
     private data;
     private screen;
