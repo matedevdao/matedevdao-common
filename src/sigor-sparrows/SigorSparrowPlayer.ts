@@ -15,16 +15,16 @@ export default class SigorSparrowPlayer extends DomNode {
     this.data = data;
 
     const skins: string[] = [];
-    for (const [partName, part] of Object.entries(this.data.parts)) {
+    for (const [partName, part] of Object.entries(data.parts)) {
       skins.push(`${partName}/${part}`);
     }
 
-    const style = this.data.traits!["Style"] as string;
+    const style = data.traits!["Style"] as string;
     const stylePath = style === "Illustration" ? "normal" : "pixel";
 
     const images: { src: string; drawingOrder: number }[] = [];
 
-    for (const [partName, partValue] of Object.entries(this.data.parts)) {
+    for (const [partName, partValue] of Object.entries(data.parts)) {
       if (stylePath === "pixel" && partName === "Text Balloon") continue;
       const category = parts.find((cat) => cat.name === partName);
       if (category) {
@@ -61,7 +61,7 @@ export default class SigorSparrowPlayer extends DomNode {
       fontBytes,
       x: 500,
       y: 190,
-      text: this.data.traits!["Dialogue"] as string,
+      text: data.traits!["Dialogue"] as string,
       fontSize: 64,
       color: "#000",
     });
@@ -80,7 +80,7 @@ export default class SigorSparrowPlayer extends DomNode {
       ),
       onClick: () => {
         const utterance = new SpeechSynthesisUtterance(
-          `짹! ${this.data.traits!["Dialogue"] as string} 짹!`,
+          `짹! ${data.traits!["Dialogue"] as string} 짹!`,
         );
         utterance.lang = "ko-KR";
         utterance.pitch = 1.2;
