@@ -11,12 +11,16 @@
     flex-direction: column;
   }
 
-  >.nft-player {
+  >main {
     width      : 50%;
     flex-shrink: 0;
 
     @container (width <=@phone-width) {
       width: 100%;
+    }
+
+    >.player-container {
+      overflow: hidden;
     }
   }
 

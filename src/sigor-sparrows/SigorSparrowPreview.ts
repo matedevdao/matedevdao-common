@@ -51,7 +51,7 @@ export default class SigorSparrowPreview extends DomNode {
     const rect = this.calculateRect();
 
     const widthRatio = rect.width / 128;
-    const heightRatio = rect.width / 128;
+    const heightRatio = rect.height / 128;
     const ratio = Math.min(widthRatio, heightRatio);
 
     this.gameScreen.resize(128, 128, ratio);
