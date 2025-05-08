@@ -1,18 +1,18 @@
+import { DomNode, el } from "@commonmodule/app";
+import { Input } from "@commonmodule/app-components";
 import { NFTData } from "nft-data";
 import NFTEditForm from "../nft/NFTEditForm.js";
 import parts from "./parts.json" assert { type: "json" };
 import SigorSparrowPlayer from "./SigorSparrowPlayer.js";
 import keyToFrame from "./spritesheet/key-to-frame.json" with { type: "json" };
 import spritesheet from "./spritesheet/spritesheet.json" with { type: "json" };
-import { DomNode, el } from "@commonmodule/app";
-import { Input } from "@commonmodule/app-components";
 
 export default class SigorSparrowEditForm extends NFTEditForm {
   private playerContainer: DomNode;
   private nftPlayer: SigorSparrowPlayer;
   private dialogueInput: Input;
 
-  constructor(private nftData: NFTData) {
+  constructor(nftData: NFTData) {
     super(".sigor-sparrow-edit-form", {
       traitOptions: {
         Style: ["Illustration", "Pixel Art"],
@@ -45,22 +45,13 @@ export default class SigorSparrowEditForm extends NFTEditForm {
 
     this.attributeEditor.on(
       "dataChanged",
-      (data) => {
-        this.nftData = {
-          traits: {
-            ...data.traits,
-            Dialogue: this.nftData.traits!["Dialogue"],
-          },
-          parts: { ...data.parts },
-        };
-        this.nftPlayer.setData(data);
-      },
+      () => this.nftPlayer.setData(this.getData()),
     );
 
-    this.dialogueInput.on("valueChanged", (newValue) => {
-      this.nftData.traits!["Dialogue"] = newValue;
-      this.nftPlayer.setData(this.nftData);
-    });
+    this.dialogueInput.on(
+      "valueChanged",
+      () => this.nftPlayer.setData(this.getData()),
+    );
 
     this.on("visible", () => this.resizePlayer());
     this.onWindow("resize", () => this.resizePlayer());
@@ -82,6 +73,13 @@ export default class SigorSparrowEditForm extends NFTEditForm {
   }
 
   public getData(): NFTData {
-    return this.nftData;
+    const data = this.attributeEditor.getData();
+    return {
+      traits: {
+        ...data.traits,
+        Dialogue: this.dialogueInput.value,
+      },
+      parts: { ...data.parts },
+    };
   }
 }
