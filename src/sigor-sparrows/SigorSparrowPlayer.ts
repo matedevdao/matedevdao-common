@@ -1,18 +1,25 @@
 import { DomNode, el } from "@commonmodule/app";
-import { Button, ButtonType, SvgIcon } from "@commonmodule/app-components";
+import {
+  AppCompConfig,
+  Button,
+  ButtonType,
+  SvgIcon,
+} from "@commonmodule/app-components";
 import { ImageCombiner } from "@commonmodule/image-combiner";
 import { NFTData } from "nft-data";
 import fontUrl from "./fonts/neodgm.woff2";
 import parts from "./parts.json" assert { type: "json" };
 
 export default class SigorSparrowPlayer extends DomNode {
-  constructor(private data: NFTData) {
+  constructor(data: NFTData) {
     super(".sigor-sparrow-player.nft-player");
     this.setData(data);
   }
 
   public async setData(data: NFTData) {
-    this.data = data;
+    this.clear();
+
+    const loadingSpinner = new AppCompConfig.LoadingSpinner().appendTo(this);
 
     const skins: string[] = [];
     for (const [partName, part] of Object.entries(data.parts)) {
@@ -23,7 +30,6 @@ export default class SigorSparrowPlayer extends DomNode {
     const stylePath = style === "Illustration" ? "normal" : "pixel";
 
     const images: { src: string; drawingOrder: number }[] = [];
-
     for (const [partName, partValue] of Object.entries(data.parts)) {
       if (stylePath === "pixel" && partName === "Text Balloon") continue;
       const category = parts.find((cat) => cat.name === partName);
@@ -87,5 +93,7 @@ export default class SigorSparrowPlayer extends DomNode {
         speechSynthesis.speak(utterance);
       },
     }).appendTo(this);
+
+    loadingSpinner.remove();
   }
 }

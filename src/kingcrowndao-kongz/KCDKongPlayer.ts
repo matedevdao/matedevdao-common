@@ -1,61 +1,55 @@
-import { DomNode } from "@commonmodule/app";
-import { GameScreen, Sprite } from "@gaiaengine/2d";
+import { DomNode, el } from "@commonmodule/app";
+import { AppCompConfig } from "@commonmodule/app-components";
+import { ImageCombiner } from "@commonmodule/image-combiner";
 import { NFTData } from "nft-data";
 import parts from "./parts.json" assert { type: "json" };
 
 export default class KCDKongPlayer extends DomNode {
-  private screen: GameScreen;
-
-  constructor(private data: NFTData) {
+  constructor(data: NFTData) {
     super(".kcd-kong-player.nft-player");
-
-    this.screen = new GameScreen({ width: 3200, height: 3200 }).appendTo(this);
-    this.on("visible", () => this.updateLayout());
-    this.onWindow("resize", () => this.updateLayout());
-
     this.setData(data);
   }
 
-  private updateLayout() {
-    const rect = this.calculateRect();
+  public async setData(data: NFTData) {
+    this.clear();
 
-    const widthRatio = rect.width / 3200;
-    const heightRatio = rect.width / 3200;
-    const ratio = Math.min(widthRatio, heightRatio);
-
-    this.screen.resize(3200, 3200, ratio);
-
-    this.style({ height: `${rect.width}px` });
-  }
-
-  public setData(data: NFTData) {
-    this.data = data;
-    this.render();
-  }
-
-  public render() {
-    this.screen.root.clear();
+    const loadingSpinner = new AppCompConfig.LoadingSpinner().appendTo(this);
 
     const skins: string[] = [];
-    for (const [partName, part] of Object.entries(this.data.parts)) {
+    for (const [partName, part] of Object.entries(data.parts)) {
       skins.push(`${partName}/${part}`);
     }
 
-    for (const [partName, partValue] of Object.entries(this.data.parts)) {
+    const images: { src: string; drawingOrder: number }[] = [];
+    for (const [partName, partValue] of Object.entries(data.parts)) {
       const category = parts.find((cat) => cat.name === partName);
       if (category) {
         const part = category.parts.find((p) => p.name === partValue);
         if (part?.images) {
           for (const image of part.images) {
-            const sprite = new Sprite(
-              0,
-              0,
-              `https://api.matedevdao.workers.dev/kingcrowndao-kongz/parts-images/${image.path}`,
-            ).appendTo(this.screen.root);
-            sprite.drawingOrder = image.drawingOrder;
+            images.push({
+              src:
+                `https://api.matedevdao.workers.dev/kingcrowndao-kongz/parts-images/${image.path}`,
+              drawingOrder: image.drawingOrder,
+            });
           }
         }
       }
     }
+
+    const buffers = await Promise.all(
+      images.map((image) =>
+        fetch(image.src).then((response) => response.arrayBuffer())
+      ),
+    );
+
+    const combined = ImageCombiner.combine(1000, 1000, buffers);
+
+    const blob = new Blob([combined], { type: "image/png" });
+    const url = URL.createObjectURL(blob);
+
+    this.append(el("img", { src: url }));
+
+    loadingSpinner.remove();
   }
 }
