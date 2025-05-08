@@ -39,6 +39,7 @@ export default class SigorSparrowEditForm extends NFTEditForm {
           label: "Dialogue",
           value: nftData.traits?.["Dialogue"] as string || "",
           placeholder: "Enter dialogue here...",
+          debounceDelay: 500,
         }),
       ),
     );
