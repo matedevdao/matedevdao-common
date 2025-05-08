@@ -13,7 +13,7 @@ export default class SigorSparrowEditForm extends NFTEditForm {
   private dialogueInput: Input;
 
   constructor(private nftData: NFTData) {
-    super(".sigor-sparrow-edit-form", nftData, {
+    super(".sigor-sparrow-edit-form", {
       traitOptions: {
         Style: ["Illustration", "Pixel Art"],
       },
@@ -47,11 +47,11 @@ export default class SigorSparrowEditForm extends NFTEditForm {
       "dataChanged",
       (data) => {
         this.nftData = {
-          ...data,
           traits: {
             ...data.traits,
             Dialogue: this.nftData.traits!["Dialogue"],
           },
+          parts: { ...data.parts },
         };
         this.nftPlayer.setData(data);
       },
@@ -82,12 +82,6 @@ export default class SigorSparrowEditForm extends NFTEditForm {
   }
 
   public getData(): NFTData {
-    return {
-      ...this.nftData,
-      traits: {
-        ...this.nftData.traits,
-        Dialogue: this.dialogueInput.value,
-      },
-    };
+    return this.nftData;
   }
 }

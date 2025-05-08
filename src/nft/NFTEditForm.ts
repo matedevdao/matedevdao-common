@@ -10,7 +10,6 @@ export default abstract class NFTEditForm extends DomNode {
 
   constructor(
     tag: `.${string}`,
-    nftData: NFTData,
     editorOptions: NFTAttributeEditorOptions,
   ) {
     super(`${tag}.nft-edit-form`);

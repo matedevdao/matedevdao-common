@@ -3,7 +3,7 @@ import { NFTAttributeEditor, NFTAttributeEditorOptions } from "nft-attribute-edi
 import { NFTData } from "nft-data";
 export default abstract class NFTEditForm extends DomNode {
     protected attributeEditor: NFTAttributeEditor;
-    constructor(tag: `.${string}`, nftData: NFTData, editorOptions: NFTAttributeEditorOptions);
+    constructor(tag: `.${string}`, editorOptions: NFTAttributeEditorOptions);
     getData(): NFTData;
 }
 //# sourceMappingURL=NFTEditForm.d.ts.map

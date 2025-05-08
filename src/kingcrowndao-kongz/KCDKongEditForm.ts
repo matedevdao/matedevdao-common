@@ -8,8 +8,8 @@ import spritesheet from "./spritesheet/spritesheet.json" with { type: "json" };
 export default class KCDKongEditForm extends NFTEditForm {
   private nftPlayer: KCDKongPlayer;
 
-  constructor(nftData: NFTData) {
-    super(".kcd-kong-edit-form", nftData, {
+  constructor(private nftData: NFTData) {
+    super(".kcd-kong-edit-form", {
       partOptions: parts,
       baseData: nftData,
       keyToFrame,
