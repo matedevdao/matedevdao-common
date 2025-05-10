@@ -1,1 +1,1 @@
-{"version":3,"file":"NFTListItem.d.ts","sourceRoot":"","sources":["../../src/nft/NFTListItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,mBAAmB,CAAC;AAE5C,OAAO,eAAe,MAAM,sBAAsB,CAAC;AAEnD,MAAM,CAAC,OAAO,OAAO,WAAY,SAAQ,OAAO;gBAClC,OAAO,EAAE,eAAe;CAIrC"}
+{"version":3,"file":"NFTListItem.d.ts","sourceRoot":"","sources":["../../src/nft/NFTListItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,GAAG,EAAE,MAAM,mBAAmB,CAAC;AAExC,OAAO,eAAe,MAAM,sBAAsB,CAAC;AAEnD,MAAM,CAAC,OAAO,OAAO,WAAY,SAAQ,GAAG;gBAC9B,OAAO,EAAE,eAAe;CAIrC"}

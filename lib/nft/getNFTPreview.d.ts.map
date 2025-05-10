@@ -1,1 +1,1 @@
-{"version":3,"file":"getNFTPreview.d.ts","sourceRoot":"","sources":["../../src/nft/getNFTPreview.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAM,MAAM,mBAAmB,CAAC;AAIhD,OAAO,eAAe,MAAM,sBAAsB,CAAC;AAEnD,MAAM,CAAC,OAAO,UAAU,aAAa,CAAC,OAAO,EAAE,eAAe,GAAG,OAAO,CAUvE"}
+{"version":3,"file":"getNFTPreview.d.ts","sourceRoot":"","sources":["../../src/nft/getNFTPreview.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,GAAG,EAAM,MAAM,mBAAmB,CAAC;AAI5C,OAAO,eAAe,MAAM,sBAAsB,CAAC;AAEnD,MAAM,CAAC,OAAO,UAAU,aAAa,CAAC,OAAO,EAAE,eAAe,GAAG,GAAG,CAUnE"}

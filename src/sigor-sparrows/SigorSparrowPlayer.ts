@@ -1,4 +1,4 @@
-import { DomNode, el } from "@commonmodule/app";
+import { Dom, el } from "@commonmodule/app";
 import {
   AppCompConfig,
   Button,
@@ -10,7 +10,7 @@ import { NFTData } from "nft-data";
 import fontUrl from "./fonts/neodgm.woff2";
 import parts from "./parts.json" assert { type: "json" };
 
-export default class SigorSparrowPlayer extends DomNode {
+export default class SigorSparrowPlayer extends Dom {
   constructor(data: NFTData) {
     super(".sigor-sparrow-player.nft-player");
     this.setData(data);

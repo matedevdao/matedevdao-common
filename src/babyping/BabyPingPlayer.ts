@@ -1,10 +1,10 @@
-import { DomNode, el } from "@commonmodule/app";
+import { Dom, el } from "@commonmodule/app";
 import { AppCompConfig } from "@commonmodule/app-components";
 import { ImageCombiner } from "@commonmodule/image-combiner";
 import { NFTData } from "nft-data";
 import parts from "./parts.json" assert { type: "json" };
 
-export default class BabyPingPlayer extends DomNode {
+export default class BabyPingPlayer extends Dom {
   constructor(data: NFTData) {
     super(".baby-ping-player.nft-player");
     this.setData(data);

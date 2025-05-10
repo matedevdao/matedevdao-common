@@ -1,4 +1,4 @@
-import { DomNode, el } from "@commonmodule/app";
+import { AppRoot, Dom, el } from "@commonmodule/app";
 import { GameScreen, Sprite } from "@gaiaengine/dom";
 import { NFTData } from "nft-data";
 import parts from "./parts.json" assert { type: "json" };
@@ -9,9 +9,9 @@ import spritesheet from "./spritesheet/spritesheet.json" assert {
   type: "json",
 };
 
-export default class SigorSparrowPreview extends DomNode {
+export default class SigorSparrowPreview extends Dom {
   private gameScreen: GameScreen;
-  private dialogue: DomNode;
+  private dialogue: Dom;
 
   constructor(nftData: NFTData) {
     super(".sigor-sparrow-preview.nft-preview");
@@ -44,7 +44,7 @@ export default class SigorSparrowPreview extends DomNode {
     }
 
     this.on("visible", () => this.updateGameScreenSize());
-    this.onWindow("resize", () => this.updateGameScreenSize());
+    AppRoot.bind(this, "resize", () => this.updateGameScreenSize());
   }
 
   private updateGameScreenSize() {

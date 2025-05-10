@@ -1,6 +1,6 @@
-import { DomNode } from "@commonmodule/app";
+import { Dom } from "@commonmodule/app";
 import { NFTData } from "nft-data";
-export default class SigorSparrowPreview extends DomNode {
+export default class SigorSparrowPreview extends Dom {
     private gameScreen;
     private dialogue;
     constructor(nftData: NFTData);

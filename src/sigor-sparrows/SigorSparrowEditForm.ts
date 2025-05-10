@@ -1,4 +1,4 @@
-import { DomNode, el } from "@commonmodule/app";
+import { AppRoot, Dom, el } from "@commonmodule/app";
 import { Input } from "@commonmodule/app-components";
 import { NFTData } from "nft-data";
 import NFTEditForm from "../nft/NFTEditForm.js";
@@ -8,7 +8,7 @@ import keyToFrame from "./spritesheet/key-to-frame.json" with { type: "json" };
 import spritesheet from "./spritesheet/spritesheet.json" with { type: "json" };
 
 export default class SigorSparrowEditForm extends NFTEditForm {
-  private playerContainer: DomNode;
+  private playerContainer: Dom;
   private nftPlayer: SigorSparrowPlayer;
   private dialogueInput: Input;
 
@@ -55,7 +55,7 @@ export default class SigorSparrowEditForm extends NFTEditForm {
     );
 
     this.on("visible", () => this.resizePlayer());
-    this.onWindow("resize", () => this.resizePlayer());
+    AppRoot.bind(this, "resize", () => this.resizePlayer());
   }
 
   private resizePlayer() {

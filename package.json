@@ -2,17 +2,16 @@
   "name": "matedevdao-common",
   "author": "matedevdao",
   "homepage": "https://matedevdao.github.io",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "types": "./lib/index.d.ts",
   "main": "./lib/index.js",
   "dependencies": {
     "@commonmodule/image-combiner": "^0.0.4",
-    "@commonmodule/material-loading-spinner": "^0.1.7",
-    "@commonmodule/social-components": "^0.1.7",
-    "@gaiaengine/2d": "^0.2.6",
-    "kaia-wallet-login-module": "^0.0.2",
-    "nft-attribute-editor": "^0.0.2"
+    "@commonmodule/material-loading-spinner": "^0.3.6",
+    "@commonmodule/social-components": "^0.3.6",
+    "kaia-wallet-login-module": "^0.0.4",
+    "nft-attribute-editor": "^0.0.3"
   },
   "devDependencies": {}
 }

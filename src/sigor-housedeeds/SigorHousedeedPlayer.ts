@@ -1,6 +1,6 @@
-import { DomNode, el } from "@commonmodule/app";
+import { Dom, el } from "@commonmodule/app";
 
-export default class SigorHousedeedPlayer extends DomNode {
+export default class SigorHousedeedPlayer extends Dom {
   constructor() {
     super(".sigor-housedeed-player.nft-player");
     this.append(

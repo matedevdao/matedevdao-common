@@ -1,11 +1,11 @@
-import { DomNode } from "@commonmodule/app";
+import { Dom } from "@commonmodule/app";
 import {
   NFTAttributeEditor,
   NFTAttributeEditorOptions,
 } from "nft-attribute-editor";
 import { NFTData } from "nft-data";
 
-export default abstract class NFTEditForm extends DomNode {
+export default abstract class NFTEditForm extends Dom {
   protected attributeEditor: NFTAttributeEditor;
 
   constructor(
