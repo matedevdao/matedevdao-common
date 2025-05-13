@@ -4,7 +4,6 @@
 
   display         : flex;
   background-color: var(--modal-bg-color);
-  border-radius   : 8px;
   overflow        : hidden;
 
   @container (width <=@phone-width) {
@@ -18,6 +17,10 @@
     @container (width <=@phone-width) {
       width: 100%;
     }
+
+    display       : flex;
+    flex-direction: column;
+    gap           : 30px;
 
     >.player-container {
       overflow: hidden;

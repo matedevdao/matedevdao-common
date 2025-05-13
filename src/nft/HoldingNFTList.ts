@@ -4,7 +4,7 @@ import NFTDataWithMeta from "./NFTDataWithMeta.js";
 import NFTList from "./NFTList.js";
 
 export default class HoldingNFTList extends Dom<HTMLDivElement, {
-  selectNFT: (nftData: NFTDataWithMeta) => void;
+  nftSelected: (nftData: NFTDataWithMeta) => void;
 }> {
   constructor(private walletAddress: string) {
     super(".holding-nft-list");
@@ -23,6 +23,6 @@ export default class HoldingNFTList extends Dom<HTMLDivElement, {
 
   private renderNFTs(nfts: NFTDataWithMeta[]) {
     const list = new NFTList(nfts).appendTo(this);
-    list.on("selectNFT", (nftData) => this.emit("selectNFT", nftData));
+    list.on("nftSelected", (nftData) => this.emit("nftSelected", nftData));
   }
 }

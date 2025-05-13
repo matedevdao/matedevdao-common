@@ -8,6 +8,7 @@ import keyToFrame from "./spritesheet/key-to-frame.json" with { type: "json" };
 import spritesheet from "./spritesheet/spritesheet.json" with { type: "json" };
 
 export default class SigorSparrowEditForm extends NFTEditForm {
+  private main: Dom;
   private playerContainer: Dom;
   private nftPlayer: SigorSparrowPlayer;
   private dialogueInput: Input;
@@ -29,7 +30,7 @@ export default class SigorSparrowEditForm extends NFTEditForm {
     });
 
     this.prepend(
-      el(
+      this.main = el(
         "main",
         this.playerContainer = el(
           ".player-container",
@@ -59,7 +60,7 @@ export default class SigorSparrowEditForm extends NFTEditForm {
   }
 
   private resizePlayer() {
-    const rect = this.playerContainer.calculateRect();
+    const rect = this.main.calculateRect();
     const ratio = rect.width / 1000;
 
     this.playerContainer.style({

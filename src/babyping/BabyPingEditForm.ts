@@ -8,7 +8,7 @@ import spritesheet from "./spritesheet/spritesheet.json" with { type: "json" };
 export default class BabyPingEditForm extends NFTEditForm {
   private nftPlayer: BabyPingPlayer;
 
-  constructor(private nftData: NFTData) {
+  constructor(nftData: NFTData) {
     super(".babyping-edit-form", {
       partOptions: parts,
       baseData: nftData,
