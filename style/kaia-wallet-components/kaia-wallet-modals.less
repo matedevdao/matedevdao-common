@@ -1,0 +1,18 @@
+.non-modal-dialog-container:has(.kaia-wallet-connection-modal),
+.non-modal-dialog-container:has(.kaia-wallet-login-modal) {
+  z-index: 99997;
+}
+
+.kaia-wallet-connection-modal,
+.kaia-wallet-login-modal {
+  max-width: 480px !important;
+
+  >main>.button-group>button {
+    gap: 12px;
+
+    >.icon-container {
+      width : 40px;
+      height: 40px;
+    }
+  }
+}

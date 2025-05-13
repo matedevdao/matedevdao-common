@@ -1,8 +1,13 @@
+import { Dom } from "@commonmodule/app";
 import { AppCompConfig } from "@commonmodule/app-components";
 import { ImageCombiner } from "@commonmodule/image-combiner";
 import { MaterialLoadingSpinner } from "@commonmodule/material-loading-spinner";
-import { SocialCompConfig, UserManager } from "@commonmodule/social-components";
-import { AddressUtils } from "@commonmodule/wallet-utils";
+import {
+  SocialCompConfig,
+  User,
+  UserManager,
+} from "@commonmodule/social-components";
+import { AddressUtils, getAddressAvatar } from "@commonmodule/wallet-utils";
 import {
   KaiaWalletLoginConfig,
   KaiaWalletLoginManager,
@@ -21,6 +26,13 @@ class MDDModuleConfig {
 
   public async init(options: { appName: string }) {
     await ImageCombiner.initWasm();
+
+    SocialCompConfig.Avatar = class extends Dom {
+      constructor(user: User) {
+        super(".avatar");
+        this.htmlElement.innerHTML = getAddressAvatar(user.id);
+      }
+    };
 
     KaiaWalletLoginConfig.init({
       appName: options.appName,
